@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
 
 	// Check TEE option
 	if(argc > 4 || argc <= 2){
-		printf("[ Please check the execution options. ]\n");
+		printf("Please check the execution options.\n");
 		return 1;
 	}
 	if(argc == 3){
@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
 			kindOfwork = RSA_ENCRYPT;
 
 	}else{
-		printf("[ Please check the execution options. ]\n");
+		printf("Please check the execution options.\n");
 		return 1;
 
 	}
@@ -206,7 +206,7 @@ int main(int argc, char *argv[])
 				return 1;
 			}
 			
-			printf("[ CAESAR Encryption complete. ]\n");
+			printf("CAESAR Encryption complete!\n");
 
 			// Disconnect
 			TEEC_CloseSession(&sess);
@@ -267,7 +267,7 @@ int main(int argc, char *argv[])
 				printf("fail");
 				return 1;
 			}
-			printf("[ CAESAR Decryption complete. ]\n");
+			printf("CAESAR Decryption complete!\n");
 
 			// Disconnect
 			TEEC_CloseSession(&sess);
@@ -310,7 +310,7 @@ int main(int argc, char *argv[])
 				printf("fail");
 				return 1;
 			}
-			printf("[ RSA Encryption complete. ]\n");
+			printf("RSA Encryption complete!\n");
 
 
 			// Disconnect
