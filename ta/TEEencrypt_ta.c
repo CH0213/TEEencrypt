@@ -74,10 +74,11 @@ static TEE_Result create_randomkey(uint32_t param_types,
 	TEE_Param params[4])
 {
 	DMSG("========================Create Random Key========================\n");
-	while(random_key % 26 == 0){
+	TEE_GenerateRandom(&random_key, sizeof(random_key));
+	random_key = random_key % 26;
+	while(random_key == 0){
 		TEE_GenerateRandom(&random_key, sizeof(random_key));
 		random_key = random_key % 26;
-		break;
 	}
 	
 	IMSG("Create New RandomKey : %d\n", random_key);
